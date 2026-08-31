@@ -1,0 +1,46 @@
+#INPUT FILE FOR CALCULATING THE BAND STRUCTURE OF PERIODIC SYSTEMS
+CalculationMode = unocc   #GS calculation
+FromScratch = yes
+
+###### SYSTEM PARAMETERS ##########
+
+PeriodicDimensions = 3
+
+a = 5.44
+L = 20
+
+%LatticeParameters
+ a | a | a
+ %
+
+%LatticeVectors
+  0.0    |  0.5    | 0.5
+  0.5    |  0.0    | 0.5
+  0.5    |  0.5    | 0.0
+%
+
+%ReducedCoordinates
+'Si' |  0.  |    0. |   0.
+'Si' |  1/4 |   1/4 |   1/4
+%
+
+######## CALCULATION OPTIONS ########
+
+PseudopotentialSet = hgh_lda
+
+Spacing = 0.4
+### For calculation of band structure______________________________________________________
+
+ExtraStates = 12
+
+KPointsUseSymmetries = no
+
+%KPointsPath
+ 12  |  12 | 12 | 12 | 12 
+ 0.0 | 0.0 | 0.0  # Gamma point
+ 0.5 | 0.0 | 0.5  # X point
+ 0.5 | 0.25 | 0.75  # W point
+ 0.375 | 0.375 | 0.75  # K point
+ 0.0 | 0.0 | 0.0  # Gamma point
+ 0.5 | 0.5 | 0.5  # L point
+%
