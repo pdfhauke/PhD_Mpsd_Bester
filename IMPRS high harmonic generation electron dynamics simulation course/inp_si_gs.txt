@@ -1,6 +1,6 @@
 ###INPUT FILE FOR CALCULATION OF GS OF PERIODIC SYSTEMS
 
-CalculationMode = unocc   #GS calculation
+CalculationMode = gs   #GS calculation
 FromScratch = yes
 
 ###### SYSTEM PARAMETERS ##########
