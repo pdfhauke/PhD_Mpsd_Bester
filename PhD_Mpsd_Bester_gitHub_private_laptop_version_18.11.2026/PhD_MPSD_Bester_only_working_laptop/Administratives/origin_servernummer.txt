@@ -1,0 +1,4 @@
+Seriennummer: SF8T5-3089-7904277
+
+FLEXlm Server: datascience.rrz.uni-hamburg.de
+TCP/IP Port: 3636

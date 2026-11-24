@@ -1,0 +1,28 @@
+program integration
+    implicit non
+    !Declare and define variables
+    Integer :: i,n 
+    Real :: intersum, x_left, x_right, x, dx 
+    x_left = 2
+    x_right = 10
+    n = 100000
+    i = 0
+    intersum = 0
+    x = x_left
+    dx = (x_right -x_left)/n
+    !stepwise integration loop
+    do i = 1, n 
+        intersum = intersum + f(x)*dx
+        x = x + dx
+    end do
+
+    Print *, 'Integral of f(x) is: ', intersum
+
+!integrate and define internal functions
+contains 
+    function f(x) result(y)
+        Real, intent(in) :: x !Input
+        Real :: y !Output
+        y = 5*x -3*x**2 +5    
+    end function f
+end program integration
